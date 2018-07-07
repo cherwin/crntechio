@@ -17,23 +17,20 @@ resource "digitalocean_droplet" "node0" {
   ssh_keys = [20167863]
 }
 
-/*
 resource "digitalocean_droplet" "node1" {
-  image  = "centos-7-x64"
-  name   = "node1"
-  region = "lon1"
-  size   = "512mb"
-  tags   = ["${digitalocean_tag.consul.id}"]
-  ssh_keys = [ 20167863 ]
+  image    = "centos-7-x64"
+  name     = "node1"
+  region   = "lon1"
+  size     = "512mb"
+  tags     = ["${digitalocean_tag.consul.id}"]
+  ssh_keys = [20167863]
 }
 
 resource "digitalocean_droplet" "node2" {
-  image  = "centos-7-x64"
-  name   = "node2"
-  region = "lon1"
-  size   = "512mb"
-  tags   = ["${digitalocean_tag.consul.id}"]
-  ssh_keys = [ 20167863 ]
+  image    = "centos-7-x64"
+  name     = "node2"
+  region   = "lon1"
+  size     = "512mb"
+  tags     = ["${digitalocean_tag.consul.id}"]
+  ssh_keys = [20167863]
 }
-*/
-
