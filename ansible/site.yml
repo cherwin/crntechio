@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+  - { role: roles/common }
+
+- hosts: consul
+  roles:
+    - { role: roles/consul }

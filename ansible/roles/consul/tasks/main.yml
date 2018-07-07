@@ -1,0 +1,6 @@
+---
+- name: Install consul
+  unarchive:
+    src: https://releases.hashicorp.com/consul/1.2.0/consul_1.2.0_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
