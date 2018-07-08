@@ -17,8 +17,3 @@
     line: 'SELINUX=disabled'
   tags:
     - e
-
-- name: Disable selinux (runtime)
-  command: setenforce 0 || true
-  tags:
-    - e
