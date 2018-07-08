@@ -1,4 +1,4 @@
-# Reference Architecture Consul/Nomad/Fabio
+# Reference Architecture Consul/Nomad/Fabio on Digital Ocean
 
 
 ## Prerequisites
