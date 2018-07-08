@@ -6,3 +6,7 @@
 - hosts: consul
   roles:
     - { role: roles/consul }
+    - { role: roles/nomad }
+    - { role: roles/docker }
+  tags:
+    - consul

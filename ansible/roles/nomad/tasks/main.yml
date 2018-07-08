@@ -1,0 +1,93 @@
+---
+- name: Install nomad
+  unarchive:
+    src: https://releases.hashicorp.com/nomad/0.8.4/nomad_0.8.4_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+  tags:
+    - nomad
+
+- name: Create nomad server config directory
+  file:
+    path: /etc/nomad.d
+    state: directory
+  tags:
+    - nomad
+
+- name: Create nomad job directory
+  file:
+    path: /etc/nomad.d/jobs
+    state: directory
+  tags:
+    - jobs
+
+- name: Copy crntech job definition
+  template:
+    dest: /etc/nomad.d/jobs/
+    src: files/crntech.nomad
+  tags:
+    - fabio
+
+- name: Copy fabio job definition
+  template:
+    dest: /etc/nomad.d/jobs/
+    src: files/fabio.nomad
+  tags:
+    - fabio
+
+- name: Create nomad server configuration
+  template:
+    dest: /etc/nomad.d/server.hcl
+    src: files/server.hcl.j2
+  tags:
+    - config
+
+- name: Create nomad client configuration
+  template:
+    dest: /etc/nomad.d/client.hcl
+    src: files/client.hcl.j2
+  tags:
+    - config
+
+- name: Create nomad systemd server configuration
+  template:
+    dest: /etc/systemd/system/nomad-server.service
+    src: files/server.service.j2
+  tags:
+    - systemd
+
+- name: Create nomad systemd client configuration
+  template:
+    dest: /etc/systemd/system/nomad-client.service
+    src: files/client.service.j2
+  tags:
+    - systemd
+
+- name: Start systemd nomad server
+  systemd:
+    name: nomad-server
+    state: started
+  tags:
+    - systemd
+
+- name: Start systemd nomad client
+  systemd:
+    name: nomad-client
+    state: started
+  tags:
+    - systemd
+
+- name: Export nomad environment
+  lineinfile:
+    path: /etc/environment
+    line: 'NOMAD_ADDR=http://{{ ansible_eth1.ipv4.address }}:4646'
+  tags:
+    - line
+
+- name: Install fabio
+  get_url:
+    url: https://github.com/fabiolb/fabio/releases/download/v1.5.9/fabio-1.5.9-go1.10.2-linux_amd64
+    dest: /usr/local/bin/fabio
+    mode: 0755
+  tags:
+    - fabio

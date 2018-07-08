@@ -1,0 +1,494 @@
+{
+  "all": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "_meta": {
+    "hostvars": {
+      "209.97.136.189": {
+        "do_id": 100778670,
+        "do_name": "node0",
+        "do_memory": 512,
+        "do_vcpus": 1,
+        "do_disk": 20,
+        "do_locked": false,
+        "do_status": "active",
+        "do_kernel": null,
+        "do_created_at": "2018-07-07T10:02:06Z",
+        "do_features": [],
+        "do_backup_ids": [],
+        "do_next_backup_window": null,
+        "do_snapshot_ids": [],
+        "do_image": {
+          "id": 34487567,
+          "name": "7.5 x64",
+          "distribution": "CentOS",
+          "slug": "centos-7-x64",
+          "public": true,
+          "regions": [
+            "nyc1",
+            "sfo1",
+            "nyc2",
+            "ams2",
+            "sgp1",
+            "lon1",
+            "nyc3",
+            "ams3",
+            "fra1",
+            "tor1",
+            "sfo2",
+            "blr1"
+          ],
+          "created_at": "2018-05-19T08:31:48Z",
+          "min_disk_size": 20,
+          "type": "snapshot",
+          "size_gigabytes": 0.44
+        },
+        "do_volume_ids": [],
+        "do_size": {
+          "slug": "512mb",
+          "memory": 512,
+          "vcpus": 1,
+          "disk": 20,
+          "transfer": 1,
+          "price_monthly": 5,
+          "price_hourly": 0.00744,
+          "regions": [
+            "ams2",
+            "ams3",
+            "blr1",
+            "fra1",
+            "lon1",
+            "nyc1",
+            "nyc2",
+            "nyc3",
+            "sfo1",
+            "sfo2",
+            "sgp1",
+            "tor1"
+          ],
+          "available": true
+        },
+        "do_size_slug": "512mb",
+        "do_networks": {
+          "v4": [
+            {
+              "ip_address": "209.97.136.189",
+              "netmask": "255.255.240.0",
+              "gateway": "209.97.128.1",
+              "type": "public"
+            }
+          ],
+          "v6": []
+        },
+        "do_region": {
+          "name": "London 1",
+          "slug": "lon1",
+          "sizes": [
+            "32gb",
+            "16gb",
+            "2gb",
+            "1gb",
+            "4gb",
+            "8gb",
+            "512mb",
+            "64gb",
+            "48gb",
+            "c-16",
+            "s-1vcpu-3gb",
+            "c-32",
+            "c-2",
+            "c-4",
+            "c-8",
+            "m-1vcpu-8gb",
+            "m-16gb",
+            "m-32gb",
+            "m-64gb",
+            "m-128gb",
+            "m-224gb",
+            "s-1vcpu-1gb",
+            "s-1vcpu-2gb",
+            "s-2vcpu-2gb",
+            "s-3vcpu-1gb",
+            "s-2vcpu-4gb",
+            "s-4vcpu-8gb",
+            "s-6vcpu-16gb",
+            "s-8vcpu-32gb",
+            "s-12vcpu-48gb",
+            "s-16vcpu-64gb",
+            "s-20vcpu-96gb",
+            "s-24vcpu-128gb",
+            "c-1vcpu-2gb"
+          ],
+          "features": [
+            "private_networking",
+            "backups",
+            "ipv6",
+            "metadata",
+            "install_agent",
+            "storage",
+            "image_transfer"
+          ],
+          "available": true
+        },
+        "do_tags": [
+          "consul"
+        ]
+      },
+      "178.128.167.119": {
+        "do_id": 100783104,
+        "do_name": "node2",
+        "do_memory": 512,
+        "do_vcpus": 1,
+        "do_disk": 20,
+        "do_locked": false,
+        "do_status": "active",
+        "do_kernel": null,
+        "do_created_at": "2018-07-07T10:54:47Z",
+        "do_features": [],
+        "do_backup_ids": [],
+        "do_next_backup_window": null,
+        "do_snapshot_ids": [],
+        "do_image": {
+          "id": 34487567,
+          "name": "7.5 x64",
+          "distribution": "CentOS",
+          "slug": "centos-7-x64",
+          "public": true,
+          "regions": [
+            "nyc1",
+            "sfo1",
+            "nyc2",
+            "ams2",
+            "sgp1",
+            "lon1",
+            "nyc3",
+            "ams3",
+            "fra1",
+            "tor1",
+            "sfo2",
+            "blr1"
+          ],
+          "created_at": "2018-05-19T08:31:48Z",
+          "min_disk_size": 20,
+          "type": "snapshot",
+          "size_gigabytes": 0.44
+        },
+        "do_volume_ids": [],
+        "do_size": {
+          "slug": "512mb",
+          "memory": 512,
+          "vcpus": 1,
+          "disk": 20,
+          "transfer": 1,
+          "price_monthly": 5,
+          "price_hourly": 0.00744,
+          "regions": [
+            "ams2",
+            "ams3",
+            "blr1",
+            "fra1",
+            "lon1",
+            "nyc1",
+            "nyc2",
+            "nyc3",
+            "sfo1",
+            "sfo2",
+            "sgp1",
+            "tor1"
+          ],
+          "available": true
+        },
+        "do_size_slug": "512mb",
+        "do_networks": {
+          "v4": [
+            {
+              "ip_address": "178.128.167.119",
+              "netmask": "255.255.240.0",
+              "gateway": "178.128.160.1",
+              "type": "public"
+            }
+          ],
+          "v6": []
+        },
+        "do_region": {
+          "name": "London 1",
+          "slug": "lon1",
+          "sizes": [
+            "32gb",
+            "16gb",
+            "2gb",
+            "1gb",
+            "4gb",
+            "8gb",
+            "512mb",
+            "64gb",
+            "48gb",
+            "c-16",
+            "s-1vcpu-3gb",
+            "c-32",
+            "c-2",
+            "c-4",
+            "c-8",
+            "m-1vcpu-8gb",
+            "m-16gb",
+            "m-32gb",
+            "m-64gb",
+            "m-128gb",
+            "m-224gb",
+            "s-1vcpu-1gb",
+            "s-1vcpu-2gb",
+            "s-2vcpu-2gb",
+            "s-3vcpu-1gb",
+            "s-2vcpu-4gb",
+            "s-4vcpu-8gb",
+            "s-6vcpu-16gb",
+            "s-8vcpu-32gb",
+            "s-12vcpu-48gb",
+            "s-16vcpu-64gb",
+            "s-20vcpu-96gb",
+            "s-24vcpu-128gb",
+            "c-1vcpu-2gb"
+          ],
+          "features": [
+            "private_networking",
+            "backups",
+            "ipv6",
+            "metadata",
+            "install_agent",
+            "storage",
+            "image_transfer"
+          ],
+          "available": true
+        },
+        "do_tags": [
+          "consul"
+        ]
+      },
+      "178.128.37.114": {
+        "do_id": 100783105,
+        "do_name": "node1",
+        "do_memory": 512,
+        "do_vcpus": 1,
+        "do_disk": 20,
+        "do_locked": false,
+        "do_status": "active",
+        "do_kernel": null,
+        "do_created_at": "2018-07-07T10:54:48Z",
+        "do_features": [],
+        "do_backup_ids": [],
+        "do_next_backup_window": null,
+        "do_snapshot_ids": [],
+        "do_image": {
+          "id": 34487567,
+          "name": "7.5 x64",
+          "distribution": "CentOS",
+          "slug": "centos-7-x64",
+          "public": true,
+          "regions": [
+            "nyc1",
+            "sfo1",
+            "nyc2",
+            "ams2",
+            "sgp1",
+            "lon1",
+            "nyc3",
+            "ams3",
+            "fra1",
+            "tor1",
+            "sfo2",
+            "blr1"
+          ],
+          "created_at": "2018-05-19T08:31:48Z",
+          "min_disk_size": 20,
+          "type": "snapshot",
+          "size_gigabytes": 0.44
+        },
+        "do_volume_ids": [],
+        "do_size": {
+          "slug": "512mb",
+          "memory": 512,
+          "vcpus": 1,
+          "disk": 20,
+          "transfer": 1,
+          "price_monthly": 5,
+          "price_hourly": 0.00744,
+          "regions": [
+            "ams2",
+            "ams3",
+            "blr1",
+            "fra1",
+            "lon1",
+            "nyc1",
+            "nyc2",
+            "nyc3",
+            "sfo1",
+            "sfo2",
+            "sgp1",
+            "tor1"
+          ],
+          "available": true
+        },
+        "do_size_slug": "512mb",
+        "do_networks": {
+          "v4": [
+            {
+              "ip_address": "178.128.37.114",
+              "netmask": "255.255.240.0",
+              "gateway": "178.128.32.1",
+              "type": "public"
+            }
+          ],
+          "v6": []
+        },
+        "do_region": {
+          "name": "London 1",
+          "slug": "lon1",
+          "sizes": [
+            "32gb",
+            "16gb",
+            "2gb",
+            "1gb",
+            "4gb",
+            "8gb",
+            "512mb",
+            "64gb",
+            "48gb",
+            "c-16",
+            "s-1vcpu-3gb",
+            "c-32",
+            "c-2",
+            "c-4",
+            "c-8",
+            "m-1vcpu-8gb",
+            "m-16gb",
+            "m-32gb",
+            "m-64gb",
+            "m-128gb",
+            "m-224gb",
+            "s-1vcpu-1gb",
+            "s-1vcpu-2gb",
+            "s-2vcpu-2gb",
+            "s-3vcpu-1gb",
+            "s-2vcpu-4gb",
+            "s-4vcpu-8gb",
+            "s-6vcpu-16gb",
+            "s-8vcpu-32gb",
+            "s-12vcpu-48gb",
+            "s-16vcpu-64gb",
+            "s-20vcpu-96gb",
+            "s-24vcpu-128gb",
+            "c-1vcpu-2gb"
+          ],
+          "features": [
+            "private_networking",
+            "backups",
+            "ipv6",
+            "metadata",
+            "install_agent",
+            "storage",
+            "image_transfer"
+          ],
+          "available": true
+        },
+        "do_tags": [
+          "consul"
+        ]
+      }
+    }
+  },
+  "100778670": [
+    "209.97.136.189"
+  ],
+  "node0": [
+    "209.97.136.189"
+  ],
+  "digital_ocean": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "region_lon1": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "image_34487567": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "size_512mb": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "distro_CentOS": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "status_active": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "image_centos-7-x64": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "image_7.5_x64": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "consul": {
+    "hosts": [
+      "209.97.136.189",
+      "178.128.167.119",
+      "178.128.37.114"
+    ],
+    "vars": {}
+  },
+  "100783104": [
+    "178.128.167.119"
+  ],
+  "node2": [
+    "178.128.167.119"
+  ],
+  "100783105": [
+    "178.128.37.114"
+  ],
+  "node1": [
+    "178.128.37.114"
+  ]
+}

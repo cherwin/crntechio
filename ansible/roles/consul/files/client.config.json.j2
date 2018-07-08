@@ -1,0 +1,19 @@
+{% set consul_hosts = [] %}
+{% for host in groups.consul %}
+{% if consul_hosts.append(host + ":8301") %}
+{% endif %}
+{% endfor %}
+{
+"bind_addr": "{{ ansible_eth0.ipv4.address }}",
+"datacenter": "dc1",
+"data_dir": "/var/consul",
+"log_level": "INFO",
+"enable_syslog": true,
+"enable_debug": true,
+"node_name": "client-{{ ansible_hostname }}",
+"server": false,
+"service": {"name": "Apache", "tags": ["HTTP"], "port": 80,
+"check": {"script": "curl localhost >/dev/null 2>&1", "interval": "10s"}},
+"rejoin_after_leave": true,
+"retry_join": {{ consul_hosts|to_nice_json }}
+ }
