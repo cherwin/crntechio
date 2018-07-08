@@ -2,6 +2,7 @@ Prereqs
 =======
 
 `brew install jq`
+
 `brew install direnv`
 `brew install ansible`
 `brew install pipenv`
