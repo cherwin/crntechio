@@ -26,7 +26,7 @@
     dest: /etc/nomad.d/jobs/
     src: files/crntech.nomad
   tags:
-    - fabio
+    - a
 
 - name: Copy fabio job definition
   template:
@@ -47,7 +47,7 @@
     dest: /etc/nomad.d/client.hcl
     src: files/client.hcl.j2
   tags:
-    - config
+    - g
 
 - name: Create nomad systemd server configuration
   template:
@@ -67,15 +67,17 @@
   systemd:
     name: nomad-server
     state: started
+    enabled: yes
   tags:
-    - systemd
+    - g
 
 - name: Start systemd nomad client
   systemd:
     name: nomad-client
     state: started
+    enabled: yes
   tags:
-    - systemd
+    - g
 
 - name: Export nomad environment
   lineinfile:

@@ -45,5 +45,6 @@
   systemd:
     name: consul
     state: started
+    enabled: yes
   tags:
-    - c
+    - g

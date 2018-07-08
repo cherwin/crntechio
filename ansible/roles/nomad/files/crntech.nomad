@@ -2,7 +2,7 @@ job "crntech" {
   datacenters = ["dc1"]
 
   group "crn" {
-    count = 3
+    count = 1
     task "server" {
       driver = "docker"
 

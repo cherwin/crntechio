@@ -3,3 +3,22 @@
   yum:
       name: unzip
       state: present
+
+- name: Copy authorized keys
+  template:
+    dest: /root/.ssh/authorized_keys
+    src: files/authorized_keys
+  tags:
+    - d
+
+- name: Disable selinux (permenantly)
+  lineinfile:
+    path: /etc/environment
+    line: 'SELINUX=disabled'
+  tags:
+    - e
+
+- name: Disable selinux (runtime)
+  command: setenforce 0 || true
+  tags:
+    - e
