@@ -14,25 +14,23 @@ job "crntech" {
         }
       }
 
-	service {
-	  tags = ["urlprefix-/"]
-	  name = "crntechio"
-	  port = "http"
+	  service {
+	    tags = ["urlprefix-/"]
+	    name = "crntechio"
+	    port = "http"
 
-	  check {
-	    type     = "http"
-	    path     = "/"
-		  interval = "5s"
-		  timeout  = "5s"
-	  }
+	    check {
+	      type     = "http"
+	      path     = "/"
+		    interval = "5s"
+		    timeout  = "5s"
+	    }
 	}
 
-      resources {
-        network {
-          mbits = 10
-          port "http" {}
-        }
-      }
+  resources {
+    network {
+      mbits = 10
+      port "http" {}
     }
   }
 }
