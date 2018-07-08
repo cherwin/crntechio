@@ -3,7 +3,7 @@
 
 ## Prerequisites
 
-Install depedencies.
+Install dependencies.
 
 ```
 brew install jq direnv ansible pipenv
