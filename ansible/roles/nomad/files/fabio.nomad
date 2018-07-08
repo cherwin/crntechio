@@ -7,7 +7,7 @@ job "fabio" {
       driver = "exec"
 
       config {
-	      command = "/usr/local/bin/fabio"
+        command = "/usr/local/bin/fabio"
       }
 
       resources {

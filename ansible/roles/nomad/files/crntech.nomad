@@ -7,25 +7,25 @@ job "crntech" {
       driver = "docker"
 
       config {
-	    force_pull = true
+        force_pull = true
         image = "cherwin/crntechio"
         port_map = {
           http = 80
         }
       }
 
-	  service {
-	    tags = ["urlprefix-/"]
-	    name = "crntechio"
-	    port = "http"
+      service {
+        tags = ["urlprefix-/"]
+        name = "crntechio"
+        port = "http"
 
-	    check {
-	      type     = "http"
-	      path     = "/"
-		    interval = "5s"
-		    timeout  = "5s"
-	    }
-	}
+        check {
+          type     = "http"
+          path     = "/"
+          interval = "5s"
+          timeout  = "5s"
+      }
+  }
 
   resources {
     network {
