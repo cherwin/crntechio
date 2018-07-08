@@ -1,0 +1,50 @@
+---
+- name: Install consul
+  unarchive:
+    src: https://releases.hashicorp.com/consul/1.2.0/consul_1.2.0_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Create consul server config directory
+  file:
+    path: /etc/consul.d/server
+    state: directory
+
+- name: Create consul client config directory
+  file:
+    path: /etc/consul.d/client
+    state: directory
+
+- name: Create consul data directory
+  file:
+    path: /var/consul
+    state: directory
+
+- name: Create consul server configuration
+  template:
+    dest: /etc/consul.d/server/config.json
+    src: files/server.config.json.j2
+  tags:
+    - c
+
+- name: Create consul client configuration
+  template:
+    dest: /etc/consul.d/client/config.json
+    src: files/client.config.json.j2
+  tags:
+    - template
+
+- name: Create consul systemd server configuration
+  template:
+    dest: /etc/systemd/system/consul.service
+    src: files/service.j2
+  tags:
+    - template
+
+- name: Start consul server
+  systemd:
+    name: consul
+    state: started
+    enabled: yes
+  tags:
+    - g

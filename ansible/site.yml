@@ -1,0 +1,19 @@
+---
+- hosts: all
+  roles:
+  - { role: roles/common }
+  - { role: roles/contrib/docker }
+
+
+- hosts: consul
+  roles:
+    - { role: roles/consul }
+  tags:
+    - consul
+
+- hosts: nomad
+  roles:
+    - { role: roles/nomad }
+  tags:
+    - nomad
+

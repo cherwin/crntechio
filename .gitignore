@@ -1,1 +1,5 @@
 .envrc
+.terraform
+terraform.tfstate*
+ansible-digital_ocean.cache
+*.retry
