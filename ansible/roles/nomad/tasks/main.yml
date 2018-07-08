@@ -42,38 +42,16 @@
   tags:
     - config
 
-- name: Create nomad client configuration
-  template:
-    dest: /etc/nomad.d/client.hcl
-    src: files/client.hcl.j2
-  tags:
-    - g
-
 - name: Create nomad systemd server configuration
   template:
-    dest: /etc/systemd/system/nomad-server.service
+    dest: /etc/systemd/system/nomad.service
     src: files/server.service.j2
-  tags:
-    - systemd
-
-- name: Create nomad systemd client configuration
-  template:
-    dest: /etc/systemd/system/nomad-client.service
-    src: files/client.service.j2
   tags:
     - systemd
 
 - name: Start systemd nomad server
   systemd:
     name: nomad-server
-    state: started
-    enabled: yes
-  tags:
-    - g
-
-- name: Start systemd nomad client
-  systemd:
-    name: nomad-client
     state: started
     enabled: yes
   tags:
