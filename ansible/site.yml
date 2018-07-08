@@ -12,6 +12,7 @@
     - consul
 
 - hosts: nomad
+  roles:
     - { role: roles/nomad }
   tags:
     - nomad
