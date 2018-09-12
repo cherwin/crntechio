@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url("assets/Bac.jpg") center / cover no-repeat;  
+    min-height: 100vh;
+    display: flex; 
+    justify-content: space-between;
+    padding: 30px;
+    
+}
+
+.content{
+    flex: 0 1 60%;
+    align-self: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.logo{
+    width: 350px;
+
+}
+
+.info{
+    flex: 0 0 300px;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    font: OCR A Std, monospace;
+
+
+}
+
+.address{
+    flex: 0 0 300px;
+    letter-spacing: 3px;
+    font-size: 1.3em;
+    font: OCR A Std, monospace;
+    text-align: right;
+
+}
+
+
+
+
